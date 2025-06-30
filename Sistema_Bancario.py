@@ -73,7 +73,7 @@ while True:
           print("Saque realizado com sucesso")
           print("Agora o seu saldo é de: R$ {:.2f}".format(saldo_da_conta))
           print()
-          movimentacoes_saque.append(f'+ R$ {valor_saque:.2f} ({time.localtime().tm_mday}/{time.localtime().tm_mon} as {time.localtime().tm_hour}:{time.localtime().tm_min:02d})')
+          movimentacoes_saque.append(f'- R$ {valor_saque:.2f} ({time.localtime().tm_mday:02d}/{time.localtime().tm_mon:02d} as {time.localtime().tm_hour:02d}:{time.localtime().tm_min:02d})')
           quantidade_de_saques +=1
           break
 
@@ -87,7 +87,7 @@ while True:
         print()
         print(f"Agora o seu saldo é de R$ {saldo_da_conta:.2f}")
         print()
-        movimentacoes_deposito.append(f'+ R$ {valor_deposito:.2f} ({time.localtime().tm_mday}/{time.localtime().tm_mon} as {time.localtime().tm_hour}:{time.localtime().tm_min:02d})')
+        movimentacoes_deposito.append(f'+ R$ {valor_deposito:.2f} ({time.localtime().tm_mday:02d}/{time.localtime().tm_mon:02d} as {time.localtime().tm_hour:02d}:{time.localtime().tm_min:02d})')
       else:
         print("Depósito cancelado")
         print()
