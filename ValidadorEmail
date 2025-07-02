@@ -1,0 +1,25 @@
+# Entrada do usuário
+email = input().strip()
+
+# TODO: Verifique as regras do e-mail:
+
+validacao = True
+
+if email[0] == '@':
+  validacao = False
+
+if validacao == True:
+  for i in email:
+    if i == '@':
+      break
+
+if validacao == True:
+  for i in email:
+    if i == ' ':
+      validacao = False
+      break
+
+if validacao == True:
+  print('E-mail válido')
+else:
+  print('E-mail inválido')
